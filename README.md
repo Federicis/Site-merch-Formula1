@@ -1,8 +1,8 @@
 # Site-merch-Formula1
 ## Descrierea temei
 
-	În acest proiect voi realiza un site dedicat fanilor Formula 1 de unde poti cumpăra merch F1, mai exact obiecte de vestimentație, căni, postere, etc.
-	Site-ul va avea o pagină principală cu informații generale, o pagină de login/register, o pagina pe care poți explora și adăuga produsele în coș, o pagină cu coșul propriu-zis, unde poți vedea prețul total și de unde poți șterge produse din coș și o pagină de check-out.
+###În acest proiect voi realiza un site dedicat fanilor Formula 1 de unde poti cumpăra merch F1, mai exact obiecte de vestimentație, căni, postere, etc.
+###Site-ul va avea o pagină principală cu informații generale, o pagină de login/register, o pagina pe care poți explora și adăuga produsele în coș, o pagină cu coșul propriu-###zis, unde poți vedea prețul total și de unde poți șterge produse din coș și o pagină de check-out.
 ### Cuvinte/sintagme cheie:
 #### Site:
 Formula 1, F1, Formula1, Ferrari, Red Bull, Mercedes, McLaren, Alpha Tauri, Alfa Romeo, Haas, Williams, Verstappen, Hamilton, Vettel, Ricciardo, Russel, Alonso, Leclerc, Ocon, Norris, Schumacher, Senna, hanorac, tricou, Grand Prix, echipe, șoferi.
