@@ -16,9 +16,9 @@ Formula 1, F1, Formula1, Ferrari, Red Bull, Mercedes, McLaren, Alpha Tauri, Alfa
 coș, produse, ștergere, check-out.
 #### Pagina de check-out: 
 check-out.
-	### Site-uri similare:
+### Site-uri similare:
 ### https://www.fansbrands.ro
-	#### Pro:
+#### Pro:
 Strucură bună, este ușor de navigat ca și utilizator.
 Design plăcut
 Linkul catre grupul de WhatsApp dedicat site-ului.
@@ -26,31 +26,31 @@ Linkul catre grupul de WhatsApp dedicat site-ului.
 Cam multe pagini, anumite informații care se leagă ar putea fi conținute de o singură pagină în loc de doua sau mai multe, de exemplu „Contact” și „Despre noi”
 Pagină principală prea încărcată cu informații.
 ### https://fshop1.ro
-	#### Pro:
+#### Pro:
 Structură foarte bună, totul e straight forward, toate opțiunile sunt la vedere.
 Sunt promovate anumite produse pe pagina principală
-	#### Contra:
+#### Contra:
 Design puțin neatractiv 
 Keywords-urie plasate random pe pagina principală.
 ### https://f1store2.formula1.com/en/
-	#### Pro:
+#### Pro:
 Design și structură foarte bine realizate.
 Posibilitatea de a schimba valuta în care sunt afișate prețurile.
-	#### Contra:
+#### Contra:
 Ar putea adăuga mai multe monede.
 Ar putea adăuga mai multe opțiuni de limbă
 ### https://www.fuelforfans.com
-	#### Pro:
+#### Pro:
 Ideea de swipe automat pe pagina principala între mai multe produse.
 Design atractiv
-	#### Contra:
+#### Contra:
 Putine monede.
 Putine limbi disponibile.
 ### https://www.f1authentics.com/collections/all-products
-	#### Pro:
+#### Pro:
 Foarte multe categorii de produse.
 Idei originale de produse.
-	#### Contra:
+#### Contra:
 Prima pagină încărcată cu produse.
 Filtrele ar puteafi mai condensate.
 
