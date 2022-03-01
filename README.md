@@ -53,4 +53,6 @@ Idei originale de produse.
 #### Contra:
 Prima pagină încărcată cu produse.
 Filtrele ar puteafi mai condensate.
-
+## Schema cromatică
+![Palette](https://i.imgur.com/Omrkt7q.png)
+Paleta aleasă este reprezentativă pentru tema site-ului, Formula 1, în special culorile roșu și alb, în timp ce restul culorilor conferă paginii un aspect plăcut și atrăgător pentru clienți.
