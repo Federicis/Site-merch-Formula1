@@ -1,0 +1,215 @@
+/*---------Grid--------*/
+
+#container{
+    display: var(--display-mode);
+    grid-template-areas:"z-welcome z-welcome z-welcome"
+                        "z-teams z-drivers z-socialmedia"/*zona 8*/
+                        "z-updates z-updates z-updates"
+                        "z-calendar z-tabel z-anunturi"
+                        "z-lista-users z-data-users z-site-and-sv";
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+#end{
+    display: grid;
+    grid-template-areas:"z-contact z-info"
+                        "z-back z-back"
+                        "z-copyright z-copyright";
+    grid-template-columns: 1fr 1fr;
+}
+
+#welcome{
+    grid-area:z-welcome;
+    text-align:center;
+}
+
+#teams{
+    grid-area:z-teams;
+}
+#teams>h2{
+    text-align:center;
+}
+
+#drivers{
+    grid-area:z-drivers;
+}
+
+#drivers>h2{
+    text-align:center;
+}
+
+#socialmedia{
+    grid-area:z-socialmedia;
+}
+
+#socialmedia>h2{
+    text-align:center;
+}
+
+#updates{
+    grid-area:z-updates;
+    text-align: center;
+}
+
+#calendar{
+    grid-area:z-calendar;
+}
+
+#anunturi{
+    grid-area:z-anunturi;
+}
+
+#tabel{
+    grid-area:z-tabel;
+}
+
+#lista-users{
+    grid-area:z-lista-users;
+}
+
+#data-users{
+    grid-area:z-data-users;
+}
+
+#site-and-sv{
+    grid-area: z-site-and-sv;
+}
+
+#contact{
+    grid-area:z-contact;
+    text-align:center;
+}
+
+#info{
+    grid-area:z-info;
+    text-align:center;
+}
+
+#back{
+    grid-area:z-back;
+    text-align:center;
+}
+#copyright{
+    grid-area:z-copyright;
+    text-align:center;
+}
+
+#home{
+    display:var(--home-display);
+}
+
+/*--------Schema de culori--------*/
+html{
+
+    font-size:var(--fontsize);
+}
+
+body{
+    --fontsize:19px;
+    --bgcolor: #ffffff;
+    --textcolor:#246EB9;
+    --headercolor:#FF0000;
+    --bordercolor:#000000;
+    --highlightcolor:#577399;
+    --button-height: 2.5rem;
+    --button-color: #FF0000;
+    --buttontext-color:white;
+    --buttonhover-color: #246EB9;
+    --home-display: inline-block;
+    --burgerdisplay: none;
+    --button-width: 50px;
+    --display-mode:grid;
+    --border-color:#FF0000;
+    background-color:var(--bgcolor);
+    color:var(--textcolor);
+    margin-left:20px;
+    margin-right:20px;
+}
+body.dark{
+    --fontsize:19px;
+    --bgcolor: #000000;
+    --textcolor:#246EB9;
+    --headercolor:#FF0000;
+    --bordercolor:#000000;
+    --highlightcolor:#577399;
+    --button-height: 2.5rem;
+    --button-color: #FF0000;
+    --buttontext-color:white;
+    --buttonhover-color: #246EB9;
+    --home-display: inline-block;
+    --burgerdisplay: none;
+    --button-width: 50px;
+    --display-mode:grid;
+    --border-color:#FF0000;
+    background-color:var(--bgcolor);
+    color:var(--textcolor);
+    margin-left:20px;
+    margin-right:20px;
+}
+/*main{
+    background-color:orange;
+}*/
+section{
+    padding:10px;
+}
+h2{
+    color:var(--headercolor);
+}
+
+@media screen and (max-width:1600px){
+    html{
+        --fontsize: 17px;
+        --home-display: none;
+    }
+    #container{
+        display: var(--display-mode);
+        grid-template-areas:"z-welcome z-welcome"
+                        "z-teams z-drivers"/*zona 8*/
+                        "z-socialmedia z-updates"
+                        "z-calendar z-tabel"
+                        "z-anunturi z-lista-users"
+                        "z-data-users z-site-and-sv";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 800px){
+    html{
+        --fontsize: 16px;
+    }
+    header{
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+    }
+    #container{
+        display: var(--display-mode);
+        grid-template-areas:"z-welcome"
+                        "z-teams"
+                        "z-drivers"/*zona 8*/
+                        "z-socialmedia"
+                        "z-updates"
+                        "z-calendar"
+                        "z-tabel"
+                        "z-anunturi"
+                        "z-lista-users"
+                        "z-data-users"
+                        "z-site-and-sv";
+        grid-template-columns: 1fr;
+
+    }
+
+}
+table{
+    border: 5px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}

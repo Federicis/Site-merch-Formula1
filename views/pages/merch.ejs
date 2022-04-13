@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="description" content="Merch Formula 1 va ofera o gama larga de produse perfecte pentru a va sustine soferul si echipa preferata.">
+        <meta name="keywords" content="Formula 1, F1, Formula1, Ferrari, Red Bull, Mercedes, McLaren, Alpha Tauri, Alfa Romeo, Haas, Williams, Verstappen, Hamilton, Vettel, Ricciardo, Russel, Alonso, Leclerc, Ocon, Norris, Schumacher, Senna, hanorac, tricou, Grand Prix, echipe, șoferi">
+        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+        <title>Merch Formula 1</title>
+        <%- include("../fragments/head") %>
+        <script type="text/javascript" src=/resurse/js/produse.js></script>
+    </head>
+    <body>
+    <%- include("../fragments/header") %>
+
+    <main>
+
+        
+        <section id="produse">
+            <h2>Produse</h2>
+            <div class="grid-produse">
+                <% for( let prod of locals.produse) { %>
+                    <article class="produs" >
+                        <h3 class="nume">Nume: <a href="/merch/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
+                        <div class="info-prod">
+                            <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
+                            <p class="procent_reducere">Reducere <span class="val-calorii"><%- prod.procent_reducere%></span>%</p>
+                            <p class="gramaj">Echipa: <span class="val-gramaj"><%- prod.echipa%></span></p>
+                        </div>
+                        <p class="categorie">Categorie:<span class="val-categorie"><%- prod.categorie%></span></p>
+                        <figure>
+                            <a href="/produs/<%-prod.id %>" ><img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]" /></a>
+                        </figure>
+                        <label class="selecteaza-cos">
+                            Selectează:<br/>
+                            <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
+                        </label>
+                    </article>
+                <% }%>
+            </div>
+        </section>
+    </main>
+
+    <%- include("../fragments/footer") %>
+    </body>
+</html>

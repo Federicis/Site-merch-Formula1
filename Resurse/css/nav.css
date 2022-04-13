@@ -1,0 +1,174 @@
+ul.menu{
+    display:flex;
+    padding: 0;
+    text-align:center;
+    line-height: var(--button-height);
+    z-index:10;
+    position: relative;
+    font-size: var(--fontsize);
+}
+ul.submenu{
+    padding: 0;
+    display: none;
+    z-index:10;
+    animation-name: submenu-animation;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin:50% 0;
+}
+
+ul.menu li{
+    width:150px;
+    border: 1px solid var(--border-color);
+    list-style-type: none;
+    padding: 0;
+    height: var(--button-height);
+}
+
+ul.menu>li:hover>ul.submenu{
+    display:block;
+}
+
+ul.submenu li a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 0;
+    width: 10px;
+    transform-origin:0 0;
+    background-image: linear-gradient(90deg, white 0%, var(--button-color) 100%);
+    transition: all 0.5s linear;
+}
+
+ul.submenu li a::after{
+    content: '';
+    position: absolute;
+    right: 155px;
+    left: 155px;
+    transform:scaleX(-1);
+    height: 0;
+    width: 10px;
+    transform-origin:0 0;
+    background-image: linear-gradient(90deg, white 0%, var(--button-color) 100%);
+    transition: all 0.5s linear;
+}
+
+ul.submenu li a:hover::before{
+    height: var(--button-height);
+}
+
+ul.submenu li a:hover::after{
+    height: var(--button-height);
+}
+
+#hamburger{
+    display: var(--burgerdisplay);
+}
+
+#ch-menu{
+    display:none;
+}
+
+ul.menu li a{
+    display:block;
+    width:100%;
+    height: var(--button-height);
+    background-color: var(--button-color);
+    text-decoration: none;
+    color: var(--buttontext-color);
+    font-weight: bold;
+    transition: all 0.5s linear;
+}
+ul.menu>li:hover>a{
+    font-size: 1.4em;
+}
+
+@keyframes submenu-animation{
+    0%{ transform:scale(1, 0);}
+    75%{transform:scale(1, 0.5);}
+    100%{transform:scale(1, 1);}
+}
+
+@keyframes before-animation{
+    0%{ transform:scale(1, 0);}
+    75%{transform:scale(1, 0.5);}
+    100%{transform:scale(1, 1);}
+}
+
+@keyframes after-animation{
+    0%{ transform:scale(-1, 0);}
+    75%{transform:scale(-1, 0.5);}
+    100%{transform:scale(-1, 1);}
+}
+
+@keyframes before-animation-out{
+    0%{ transform:scale(1, 1);}
+    75%{transform:scale(1, 0.5);}
+    100%{transform:scale(1, 0);}
+}
+
+@keyframes after-animation-out{
+    0%{ transform:scale(-1, 1);}
+    75%{transform:scale(-1, 0.5);}
+    100%{transform:scale(-1, 0);}
+}
+
+
+/*Floating Back-To-Top Button*/
+#myBtn {
+    display: block;
+    border-style: solid;
+    position: fixed;
+    bottom: 10px;
+    float: right;
+    right: 8.5%;
+    left: 87.25%;
+    width: 3rem;
+    height: 2rem;
+    font-size: 1em;
+    color: #FF0000;
+    border-color: var(--highlightcolor);
+    border-radius: 50%;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    padding: 1px;
+
+}
+
+#myBtn>a{
+    border-bottom: none;
+    border-top: none;
+    display:block;
+    text-decoration: none;
+    text-align: center;
+}
+/*On Hover Color Change*/
+#myBtn:hover a{
+    color: red;
+}
+
+#updates-vids a{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 30%;
+    border: 2px solid #FF0000;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    height: var(--button-height);
+    color: var(--bgcolor);
+    background-color: var(--button-color);
+    align-items: center;
+    text-decoration: none;
+    line-height: var(--button-height);
+}
+#updates-ifr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

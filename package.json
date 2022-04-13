@@ -1,0 +1,39 @@
+{
+  "name": "proiect-tehnici-web",
+  "version": "1.0.0",
+  "description": "Site care vinde F1 Merch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Federicis/Site-merch-Formula1.git"
+  },
+  "keywords": [
+    "Formula",
+    "1",
+    "F1",
+    "produse",
+    "merch",
+    "echipe",
+    "șoferi"
+  ],
+  "author": "Alexandru Federicis",
+  "license": "ISC",
+  "engines":{
+    "node": "16.x"
+  },
+  "bugs": {
+    "url": "https://github.com/Federicis/Site-merch-Formula1/issues"
+  },
+  "homepage": "https://github.com/Federicis/Site-merch-Formula1#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3"
+  }
+}

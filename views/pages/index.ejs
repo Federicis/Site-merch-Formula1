@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang = "ro">
+<head>
+
+    <title> index.html </title>
+    <meta name="keywords" content="Formula 1, F1, merch, echipe, șoferi"/>
+    <meta name="description" content="Produse Formula 1"/>
+    <%-include("../fragments/head.ejs"); %>
+</head>
+<body>
+    <%-include("../fragments/header.ejs"); %>
+<main>
+
+    <div id="container">
+        <section id="welcome">
+            <h2> Bine ai venit pe acest site!</h2>
+            <h3> Cumpărături plăcute!</h3>
+            <p><button id="btn_tema">Schimba tema</button></p>
+        </section>
+
+        <section id="tabel">
+            <table>
+                <thead>
+                <tr>
+                    <th colspan="4"> Următoarele 5 curse</th>
+                </tr>
+                <tr>
+                    <th> Nume </th>
+                    <th> Țară </th>
+                    <th> Dată </th>
+                    <th> Oră </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="4">Last updated on 3 Apr 2022</td>
+                </tr>
+                </tfoot>
+            </table>
+        </section>
+        <section id="calendar">
+            <p>
+                *insert placeholder calendar*
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in risus luctus, gravida nunc eget,
+                dignissim dui. Mauris quis turpis urna. Praesent ullamcorper massa eget odio imperdiet volutpat.
+                Morbi pellentesque dignissim ligula non consequat. Proin elementum, arcu venenatis vestibulum gravida,
+                nulla erat venenatis neque, id rutrum mi diam eu urna. Sed fermentum libero vehicula nisi dapibus, at lacinia
+                lacus tincidunt. Proin vitae ex a libero pretium hendrerit. Donec a dictum odio. Cras risus sem, convallis
+                suscipit finibus aliquam, malesuada sit amet elit. Mauris eget sollicitudin purus. Praesent tempor dignissim
+                diam vitae hendrerit. Integer porttitor tincidunt nunc. Cras molestie lorem vel nisl gravida, at pulvinar urna convallis.
+            </p>
+        </section>
+        <section id="anunturi">
+            <p>
+                *insert placeholder anunturi*
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in risus luctus, gravida nunc eget,
+                dignissim dui. Mauris quis turpis urna. Praesent ullamcorper massa eget odio imperdiet volutpat.
+                Morbi pellentesque dignissim ligula non consequat. Proin elementum, arcu venenatis vestibulum gravida,
+                nulla erat venenatis neque, id rutrum mi diam eu urna. Sed fermentum libero vehicula nisi dapibus, at lacinia
+                lacus tincidunt. Proin vitae ex a libero pretium hendrerit. Donec a dictum odio. Cras risus sem, convallis
+                suscipit finibus aliquam, malesuada sit amet elit. Mauris eget sollicitudin purus. Praesent tempor dignissim
+                diam vitae hendrerit. Integer porttitor tincidunt nunc. Cras molestie lorem vel nisl gravida, at pulvinar urna convallis.
+            </p>
+        </section>
+        <section id="lista-users">
+            <p>
+                *insert placeholder lista users*
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in risus luctus, gravida nunc eget,
+                dignissim dui. Mauris quis turpis urna. Praesent ullamcorper massa eget odio imperdiet volutpat.
+                Morbi pellentesque dignissim ligula non consequat. Proin elementum, arcu venenatis vestibulum gravida,
+                nulla erat venenatis neque, id rutrum mi diam eu urna. Sed fermentum libero vehicula nisi dapibus, at lacinia
+                lacus tincidunt. Proin vitae ex a libero pretium hendrerit. Donec a dictum odio. Cras risus sem, convallis
+                suscipit finibus aliquam, malesuada sit amet elit. Mauris eget sollicitudin purus. Praesent tempor dignissim
+                diam vitae hendrerit. Integer porttitor tincidunt nunc. Cras molestie lorem vel nisl gravida, at pulvinar urna convallis.
+            </p>
+        </section>
+        <section id="date-users">
+            <h2> Datele utilizatorilor</h2>
+            <p id="ip"> IP: <%- locals.ip %></p>
+        </section>
+        <section id="site-and-sv">
+            <p>
+                *insert placeholder site si server*
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in risus luctus, gravida nunc eget,
+                dignissim dui. Mauris quis turpis urna. Praesent ullamcorper massa eget odio imperdiet volutpat.
+                Morbi pellentesque dignissim ligula non consequat. Proin elementum, arcu venenatis vestibulum gravida,
+                nulla erat venenatis neque, id rutrum mi diam eu urna. Sed fermentum libero vehicula nisi dapibus, at lacinia
+                lacus tincidunt. Proin vitae ex a libero pretium hendrerit. Donec a dictum odio. Cras risus sem, convallis
+                suscipit finibus aliquam, malesuada sit amet elit. Mauris eget sollicitudin purus. Praesent tempor dignissim
+                diam vitae hendrerit. Integer porttitor tincidunt nunc. Cras molestie lorem vel nisl gravida, at pulvinar urna convallis.
+            </p>
+        </section>
+        <section id="teams">
+            <h2><u><b>Merch</b> <b>echipe</b> <b><abbr title="Formula 1">F1</abbr></b>!</u></h2>
+            <figure>
+                <img id="ferrari-img" sizes="(min-width:1000px) 500px, (min-width:500px) 200px, (min-width:50px) 50px" src="resurse/ferrari50px.png"  srcset="resurse/ferrari400px.png 400w, resurse/ferrari200px.png 200w, resurse/ferrari50px.png 50w"  title="ferrari" alt="[Ferrari logo]"/>
+                <figcaption>Produse Ferrari
+                    <br/><br/><br/>
+                    <q>No one remembers who took second place and that will never be me.</q>
+                    <br/><br/>
+                    ― Enzo Ferrari
+                    <br/>
+                    <br/>
+                    <a href="resurse/ferrari800x1050.png" download>Descarcă logo-ul!</a></figcaption>
+            </figure>
+        </section>
+        <section id="drivers">
+            <h2><u><b>Merch</b> <b>șoferi</b> <b><abbr title="Formula 1">F1</abbr></b>!</u></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper auctor lacus, ut varius quam rhoncus pharetra. Etiam justo ligula, tincidunt et dolor sit amet, facilisis malesuada ipsum. In aliquet lacinia ipsum a scelerisque. Aliquam sodales quam non velit auctor, non suscipit enim malesuada. Nam laoreet, mi eget hendrerit varius, nibh nulla tempor ante, eget ultrices leo augue sed leo. Nulla facilisi. Ut sed mauris tortor. Cras odio sem, semper id sagittis facilisis, porttitor ut nunc. Maecenas vitae felis euismod, interdum nunc vel, lobortis nisi.
+
+                Morbi at erat dui. Sed laoreet hendrerit tellus, nec pellentesque magna elementum a. Quisque ullamcorper vestibulum sapien imperdiet placerat. Nam mauris urna, aliquet eget finibus a, efficitur ut nulla. Donec pharetra finibus est, vitae consequat nunc porttitor quis. Suspendisse finibus fermentum nunc non rhoncus. Nullam sodales mi et dolor posuere, nec suscipit lacus malesuada. Cras vel justo non metus dictum accumsan ac gravida arcu. Phasellus id enim id velit dapibus porta. Quisque dignissim nisi at sapien imperdiet porttitor. Nunc a nisl ac sem gravida sagittis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ut aliquam turpis, id aliquet nunc.
+
+                Sed at neque mollis, facilisis leo quis, fringilla justo. Nullam hendrerit, felis at rhoncus consectetur, velit leo vulputate velit, et pulvinar ligula odio a metus. Donec luctus erat vitae odio ultrices, sit amet malesuada lacus sagittis. Etiam quis justo vitae turpis sagittis porttitor in ut dolor. Suspendisse volutpat imperdiet tortor, a tempus leo convallis sit amet. Ut vitae mollis ipsum. Aenean iaculis interdum neque, sit amet efficitur eros fermentum at. Etiam sed mauris sit amet leo iaculis dignissim. Nulla mattis tortor est, tempus maximus ante facilisis a. Suspendisse rhoncus, nulla eu faucibus bibendum, libero ligula accumsan mi, ut condimentum odio lacus eget risus. Proin efficitur, nisl id sagittis pellentesque, libero nisl mattis libero, eu consectetur nisi arcu in nulla. Curabitur lobortis nec lectus ut mattis. Praesent suscipit sem ac aliquet congue. Nullam eu leo ut mi blandit ullamcorper vitae tristique dolor.
+
+                Maecenas lobortis lectus vel ex blandit, eu convallis mi vulputate. Vestibulum vitae elementum felis. Quisque hendrerit venenatis mauris eget mattis. Cras efficitur mattis lacus sit amet porttitor. Nunc sollicitudin massa sit amet lacus pulvinar, vitae pellentesque ex congue. Pellentesque sit amet purus pulvinar, dignissim tellus nec, lobortis turpis. Proin sed auctor quam. Sed sem tellus, sagittis id blandit ac, mollis sit amet quam. Sed vel mauris vel arcu posuere efficitur a id lorem. Praesent gravida arcu iaculis lectus vulputate, in vestibulum dolor condimentum. Sed sed pellentesque nulla. Fusce eu tempus neque. Donec dictum, orci in tempus hendrerit, turpis magna cursus sem, eu lacinia lacus turpis ac mauris.
+
+                In elementum faucibus ligula, ac ullamcorper magna tincidunt laoreet. Donec tempor felis vestibulum convallis commodo. Pellentesque laoreet hendrerit sapien lobortis feugiat. Mauris vel ligula sed nisl sodales pulvinar. Donec a imperdiet lacus. Proin ut urna blandit, aliquam urna a, laoreet ligula. Vestibulum quis magna ac velit porta lobortis. Vestibulum felis justo, pharetra eu dignissim non, eleifend at tellus. Maecenas ante nisl, interdum vitae felis a, tempor venenatis erat. Donec dapibus molestie mi, eget interdum augue vehicula nec. Suspendisse potenti.</p>
+        </section>
+        <article id="updates">
+            <h1>F1 UPDATES</h1>
+            <h2>Noul sezon!</h2>
+            <div id="updates-ifr">
+                <div id="updates-vids">
+                    <a href="https://www.youtube.com/embed/I--o8KEZhGQ" target="ifr">Prima zi de testing!</a>
+                    <br/>
+                    <a href="https://www.youtube.com/embed/75C_UHy097Y" target="ifr">A doua zi de testing!</a>
+                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/I--o8KEZhGQ" name="ifr" id="ifr"></iframe>
+            </div>
+            <h2>Clasament!</h2>
+            <p><a href="https://www.formula1.com/en/results.html/2021/drivers.html" target="_blank">Clasament șoferi!</a></p>
+            <p><a href="https://www.formula1.com/en/results.html/2021/team.html" target="_blank">Clasament constructori!</a></p>
+            <h2>Următaoarea cursă!</h2>
+            <p>*To be continued*</p>
+        </article>
+        <section id="socialmedia">
+            <h2><b>Social media!</b></h2>
+            <p>Instagram</p>
+            <p>Facebook</p>
+            <p>Twitter</p>
+        </section>
+    </div>
+</main>
+    <%-include("../fragments/footer.ejs"); %>
+<div id="myBtn"><a href="#beginning" >&#9650;</a></div>
+</body>
+</html>

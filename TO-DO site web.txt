@@ -1,0 +1,4 @@
+Pagina despre
+Design pagini erori
+Buton de revenire sus
+Variabile tema dark
