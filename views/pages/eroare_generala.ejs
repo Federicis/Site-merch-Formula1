@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "ro">
+<head>
+
+    <title> index.html </title>
+    <meta name="keywords" content="Formula 1, F1, merch, echipe, șoferi"/>
+    <meta name="description" content="Produse Formula 1"/>
+    <%-include("../fragments/head.ejs"); %>
+</head>
+<body>
+
+<%-include("../fragments/header.ejs"); %>
+
+    <main>
+        <div id="err-coloane">
+			<div id="err-imag">
+				<img src="<%- locals.imagine %>" />
+			</div>
+			<section>
+				<h2><%- locals.titlu %></h2>
+				<p><%- locals.text %></p>
+			</section>
+		</div>
+    </main>
+    
+    <%- include("../fragments/footer.ejs");  %>
+
+
+    </body>
+</html>

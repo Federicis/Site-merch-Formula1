@@ -1,4 +1,3 @@
 Pagina despre
-Design pagini erori
-Buton de revenire sus
 Variabile tema dark
+circuite in loc de echipe galerie statica

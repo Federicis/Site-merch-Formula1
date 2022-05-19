@@ -1,11 +1,21 @@
 ul.menu{
     display:flex;
-    padding: 0;
+    justify-content: center;
     text-align:center;
     line-height: var(--button-height);
     z-index:10;
     position: relative;
     font-size: var(--fontsize);
+    background-color: #FF1801;
+}
+@media screen and (min-width:801px){
+    ul.menu{
+        margin-left:-100px;
+        margin-right:-100px;
+    }
+    ul.menu li {
+        width:150px;
+    }
 }
 ul.submenu{
     padding: 0;
@@ -19,7 +29,7 @@ ul.submenu{
 }
 
 ul.menu li{
-    width:150px;
+    position:relative;
     border: 1px solid var(--border-color);
     list-style-type: none;
     padding: 0;
@@ -33,11 +43,9 @@ ul.menu>li:hover>ul.submenu{
 ul.submenu li a::before{
     content: '';
     position: absolute;
-    right: 0;
-    left: 0;
     height: 0;
+    left: -1px;
     width: 10px;
-    transform-origin:0 0;
     background-image: linear-gradient(90deg, white 0%, var(--button-color) 100%);
     transition: all 0.5s linear;
 }
@@ -45,8 +53,8 @@ ul.submenu li a::before{
 ul.submenu li a::after{
     content: '';
     position: absolute;
-    right: 155px;
-    left: 155px;
+    right: 151px;
+    left: 151px;
     transform:scaleX(-1);
     height: 0;
     width: 10px;
@@ -129,43 +137,90 @@ ul.menu>li:hover>a{
     height: 2rem;
     font-size: 1em;
     color: #FF0000;
-    border-color: var(--highlightcolor);
+    border-color: grey;
     border-radius: 50%;
     border-left-width: 5px;
     border-right-width: 5px;
     background-color: transparent;
-    border-bottom: 3px solid transparent;
-    border-top: 3px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
     padding: 1px;
-
+    opacity: 25%;
+    transition-duration: 0.5s;
+    line-height: 2rem;
 }
 
 #myBtn>a{
     border-bottom: none;
     border-top: none;
-    display:block;
+    display: block;
     text-decoration: none;
+    color: grey;
     text-align: center;
+    transition-duration: 0.5s;
 }
-/*On Hover Color Change*/
+
 #myBtn:hover a{
     color: red;
+}
+#myBtn:hover{
+    opacity: 100%;
+    line-height: 1rem;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #FF1801;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    top: 5px;
+    left: 110%;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 #updates-vids a{
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 30%;
+    width: 120%;
+    right: 19px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    /*top: 30%;*/
     border: 2px solid #FF0000;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
+    border-left-width: 6px;
+    /*border-top-color: transparent;*/
+    /*border-bottom-color: transparent;*/
+    background-color: #FFCCCB;
     height: var(--button-height);
-    color: var(--bgcolor);
-    background-color: var(--button-color);
+    color: #FF1801;
     align-items: center;
     text-decoration: none;
     line-height: var(--button-height);
+    transition-duration: 1s;
+}
+#updates-vids a:nth-child(2){
+    top: 1px;
+}
+#updates-vids a:hover{
+    background-color: var(--button-color);
+    color: white;
 }
 #updates-ifr{
     display: flex;

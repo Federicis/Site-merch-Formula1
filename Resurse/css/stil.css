@@ -2,12 +2,13 @@
 
 #container{
     display: var(--display-mode);
-    grid-template-areas:"z-welcome z-welcome z-welcome"
-                        "z-teams z-drivers z-socialmedia"/*zona 8*/
-                        "z-updates z-updates z-updates"
-                        "z-calendar z-tabel z-anunturi"
-                        "z-lista-users z-data-users z-site-and-sv";
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"z-welcome z-welcome z-welcome z-welcome"
+                        "z-galerie-statica z-galerie-statica z-galerie-statica z-galerie-statica"
+                        "z-teams z-drivers z-drivers z-socialmedia"/*zona 8*/
+                        "z-updates z-updates z-updates z-updates"
+                        "z-calendar z-tabel z-anunturi z-anunturi"
+                        "z-lista-users z-data-users z-site-and-sv z-site-and-sv";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
 
@@ -98,8 +99,20 @@
 #home{
     display:var(--home-display);
 }
+#galerie-statica{
+    grid-area: z-galerie-statica;
+}
 
 /*--------Schema de culori--------*/
+#welcome h3{
+    font-size: 25px;
+    font-style: italic;
+}
+
+.cos{
+    font-size: 30px;
+}
+
 html{
 
     font-size:var(--fontsize);
@@ -107,20 +120,21 @@ html{
 
 body{
     --fontsize:19px;
-    --bgcolor: #ffffff;
+    --padding-intern: 0.5em;
+    --bgcolor: white;
     --textcolor:#246EB9;
-    --headercolor:#FF0000;
+    --headercolor:#FF1801;
     --bordercolor:#000000;
     --highlightcolor:#577399;
     --button-height: 2.5rem;
-    --button-color: #FF0000;
+    --button-color: #FF1801;
     --buttontext-color:white;
     --buttonhover-color: #246EB9;
     --home-display: inline-block;
     --burgerdisplay: none;
     --button-width: 50px;
     --display-mode:grid;
-    --border-color:#FF0000;
+    --border-color:#FF1801;
     background-color:var(--bgcolor);
     color:var(--textcolor);
     margin-left:20px;
@@ -128,20 +142,21 @@ body{
 }
 body.dark{
     --fontsize:19px;
+    --padding-intern: 0.5em;
     --bgcolor: #000000;
     --textcolor:#246EB9;
-    --headercolor:#FF0000;
+    --headercolor:#FF1801;
     --bordercolor:#000000;
     --highlightcolor:#577399;
     --button-height: 2.5rem;
-    --button-color: #FF0000;
+    --button-color: #FF1801;
     --buttontext-color:white;
     --buttonhover-color: #246EB9;
     --home-display: inline-block;
     --burgerdisplay: none;
     --button-width: 50px;
     --display-mode:grid;
-    --border-color:#FF0000;
+    --border-color:#FF1801;
     background-color:var(--bgcolor);
     color:var(--textcolor);
     margin-left:20px;
@@ -165,6 +180,7 @@ h2{
     #container{
         display: var(--display-mode);
         grid-template-areas:"z-welcome z-welcome"
+                        "z-galerie-statica z-galerie-statica"
                         "z-teams z-drivers"/*zona 8*/
                         "z-socialmedia z-updates"
                         "z-calendar z-tabel"
@@ -187,6 +203,7 @@ h2{
     #container{
         display: var(--display-mode);
         grid-template-areas:"z-welcome"
+                        "z-galerie-statica"
                         "z-teams"
                         "z-drivers"/*zona 8*/
                         "z-socialmedia"
@@ -203,13 +220,54 @@ h2{
 
 }
 table{
-    border: 5px solid black;
+    border: 5px inset grey;
     border-collapse: collapse;
     width: 100%;
     text-align: center;
 }
 
+@media screen and (max-width: 800px){
+    #tableOF{
+        overflow-x: scroll;
+    }
+}
+
+table tr{
+    transition-duration: 0.5s;
+}
+
+table tr:hover{
+    outline:5px solid rgba(255, 24, 1, 0.7);
+}
+
+table tr:nth-child(even){
+    border-bottom: 2px solid #FF1801;
+}
+
+table tr:nth-child(odd){
+    border-bottom: 2px solid #246EB9;
+}
+
 th, td{
     border: 1px solid black;
     border-collapse: collapse;
+}
+
+#beginning{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:var(--headercolor);
+    font-size: 50px;
+}
+
+#arttype{
+    display:block;
+    align-items: center;
+}
+
+#welcome h2{
+    font-family: 'Tangerine', serif;
+    font-size: 48px;
 }

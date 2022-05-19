@@ -1,0 +1,40 @@
+{
+  "cale_baza": "resurse/imagini/erori",
+  "eroare_default":{
+    "titlu":"!!!Eroare!!!",
+    "text": "A survenit eroare.",
+    "imagine":"eroare.jpg"
+  },
+  "erori": [
+    {
+      "identificator":404,
+      "status":true,
+      "titlu":"404 - Nimic aici!",
+      "text": "N-avem nimic aici, intoarce-te pe site!",
+      "imagine":"goback.jpg"
+    },
+    {
+      "identificator":403,
+      "status":true,
+      "titlu":"403 - Access denied",
+      "text": "Incotro?",
+      "imagine":"eroare.jpg"
+    },
+
+    {
+      "identificator":1,
+      "status":false,
+      "titlu":"Site în lucru",
+      "text": "Muncim, muncim!",
+      "imagine":"working.jpg"
+    },
+
+    {
+      "identificator":2,
+      "status":false,
+      "titlu":"Eroare baza date",
+      "text": "Reveniti mai tarziu!",
+      "imagine":"eroare.jpg"
+    }
+  ]
+}

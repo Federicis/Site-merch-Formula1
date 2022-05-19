@@ -23,8 +23,8 @@ ul.menu{
     width:100%;
 }
 ul.submenu li a:hover::before{
-    right: 300px;
-    left: 300px;
+    right: 400px;
+    left: 400px;
 }
 
 ul.submenu li a:hover::after{
@@ -36,7 +36,9 @@ ul.submenu li a:hover::after{
 #ch-menu:checked+ul.menu{
     display: block;
     z-index: 2;
-    position: relative;
+    position: absolute;
+    width: 85.8%;
+    top: 99px;
     transform-origin: 0 0;
     animation-name: aparitie_meniu_p;
     animation-iteration-count:1;
@@ -45,7 +47,7 @@ ul.submenu li a:hover::after{
     animation-timing-function:linear;
 }
 #ch-menu:checked+ul.menu>li>div,#ch-menu:checked+ul.menu>li>a{
-    
+
     z-index: 2;
     position: relative;
     transform-origin: 50% 50%;
@@ -63,7 +65,8 @@ nav ul.menu li{
 /*meniul sa vina deasupra continutul de mai jos, fara sa impinga continutul*/
 nav ul.menu>li ul{
     position:absolute;
-    width:100%;
+    left: -41px;
+    width:108%;
     z-index:200;
     transform:scale(1,1);
 }
@@ -75,25 +78,18 @@ nav ul.menu>li ul{
 nav ul.menu>li:hover>ul{
     
     z-index:200;
-    animation:none;
 }
 
 
 
 @keyframes aparitie_meniu_p{
-    0%{
-        opacity:0;
-    } 
-	100%{
-    	opacity:1;
-    }
+    0%{ transform:scale(0, 1);}
+    75%{transform:scale(0.5, 1);}
+    100%{transform:scale(1, 1);}
 }
 
 @keyframes aparitie_meniu_p_btn{
-    0%{
-        transform:scale(0,0);
-    } 
-	100%{
-    	transform:scale(1,1);
-    }
+    0%{ transform:scale(0, 1);}
+    75%{transform:scale(0.5, 1);}
+    100%{transform:scale(1, 1);}
 }

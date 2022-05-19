@@ -23,7 +23,7 @@
                     <p>Reducere <span class="gramaj"><%- locals.prod.procent_reducere %> </span>%</p>
                     <p>Categorie: <span class="categorie"><%- locals.prod.categorie %> </span></p>
                     <p>Pentru copii: <span class="pt_diabetici"><%- locals.prod.pt_copii %> </span></p>
-                    <p>Data adăugare: <span class="categorie"><%- locals.prod.data_adaugare %> </span></p>
+                    <p>Data adăugare: <span class="categorie"><time datetime="<%- locals.prod.data_adaugare %>"><%-locals.prod.data_adaugare%></time> </span></p>
                     <figure class="imag-produs">
                         <img  src="/resurse/imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
                     </figure>    

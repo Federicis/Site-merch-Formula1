@@ -1,0 +1,16 @@
+.produs > figure{
+    max-width: 50%;
+    max-height: 50%;
+}
+.produs{
+    display: grid;
+    grid-template-areas:"z-main z-info";
+    grid-template-columns: 1fr 1fr;
+}
+ #main{
+    grid-area:z-main;
+}
+ .info-prod{
+     grid-area: z-info;
+
+ }

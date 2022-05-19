@@ -3,36 +3,101 @@
     <head>
         <meta name="description" content="Merch Formula 1 va ofera o gama larga de produse perfecte pentru a va sustine soferul si echipa preferata.">
         <meta name="keywords" content="Formula 1, F1, Formula1, Ferrari, Red Bull, Mercedes, McLaren, Alpha Tauri, Alfa Romeo, Haas, Williams, Verstappen, Hamilton, Vettel, Ricciardo, Russel, Alonso, Leclerc, Ocon, Norris, Schumacher, Senna, hanorac, tricou, Grand Prix, echipe, șoferi">
-        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+        <link rel="stylesheet" href="/resurse/css/merch.css" type="text/css"/>
+<!--        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />-->
         <title>Merch Formula 1</title>
         <%- include("../fragments/head") %>
-        <script type="text/javascript" src=/resurse/js/produse.js></script>
+        <script type="text/javascript" src=/resurse/js/merch.js></script>
     </head>
     <body>
     <%- include("../fragments/header") %>
 
     <main>
+        <label> Nume: <input type="text" id="inp-nume"></label>
+        <br/>
+        <br/>
 
-        
+        <!--<label> Maxim calorii: <input type="number" id="inp-calorii" value="10000"></label>-->
+        <div> Echipe:<!-- trebuie sa aiba acelasi name ca sa formeze un grup -->
+            <%let i = 0;%>
+            <%for(let echipa of locals.echipe){%>
+            <% i+= 1;%>
+            <p><label><%-echipa%>
+                    <input id="i_rad<%-i%>"  name="gr_rad" value="<%-echipa%>" type="radio"/>
+                </label></p>
+                <%}%>
+            <p><label>Toate
+                    <input id="i_rad<%-i + 1%>" checked name="gr_rad" value="toate" type="radio"/>
+                </label>
+        </div>
+        <label> Pret minim: <%-locals.pretMin%> <input type="range" id="inp-pret" value="<%-locals.pretMin%>" min="<%-locals.pretMin%>"  max="<%-locals.pretMax%>"> <span id="infoRange">(0)</span></label>
+        <br/><br/>
+        <label>Categorie:
+            <select id="inp-categorie">
+                <option id="sel-toate" selected value="toate">toate</option>
+                <% for (let opt of locals.optiuni) { %>
+                    <option value="<%- opt %>"><%- opt.replaceAll("_", " "); %> </option>
+                <% } %>
+            </select>
+        </label>
+            <label for="browser">Alege mărimea:
+            <input list="sizes" name="size" id="inp-size">
+            <datalist id="sizes">
+                <% for(let marime of locals.marimi){%>
+                <option value="<%-marime%>">
+                <%}%>
+            </datalist>
+            </label>
+        <label><input type="checkbox" id="inp-kids">Afiseaza doar cu discount pe baza categoriei pentru copii.</label>
+        <br/><br/>
+        <label><p id="arttype">Tip produs: </p>
+            <select id="inp-luna" multiple="multiple">
+                <option id="sel-toate2" selected value="toate">toate</option>
+                <% for (let opt of locals.luni) { %>
+                    <option value="<%- opt.toLowerCase() %>"><%- opt; %> </option>
+                <% } %>
+            </select>
+        </label>
+
+
+        <p>
+            <button id="filtrare">Filtreaza</button>
+            <span style="display:none; color:red" class="err-filtru"> Nume invalid. Filtrare nereusita. </span>
+            <button id="resetare">Reseteaza</button><br/>
+            <button id="sortCrescPret">Sorteaza crescator dupa pret si numarul de marimi disponibile</button>
+            <button id="sortDescrescPret">Sorteaza descrescator dupa pret si numarul de marimi disponibile</button>
+
+        </p>
+
+        <p id="p-suma">Apăsați RAlt+"c" pentru suma preturilor produselor afișate. </p>
         <section id="produse">
             <h2>Produse</h2>
             <div class="grid-produse">
                 <% for( let prod of locals.produse) { %>
-                    <article class="produs" >
-                        <h3 class="nume">Nume: <a href="/merch/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
-                        <div class="info-prod">
+                    <article class="produs <%-prod.categorie%>" id="produs_<%-prod.id%>" >
+                        <div id="main">
+                            <h3 class="nume">Nume: <a href="/merch/id/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
+                            <figure>
+                                <a href="/merch/id/<%-prod.id %>" ><img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]" class="prod-img"/></a>
+                            </figure>
+                            <p class="categorie">Categorie:<span class="val-categorie"><%- prod.categorie%></span></p>
                             <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
-                            <p class="procent_reducere">Reducere <span class="val-calorii"><%- prod.procent_reducere%></span>%</p>
-                            <p class="gramaj">Echipa: <span class="val-gramaj"><%- prod.echipa%></span></p>
+                            <p class="procent_reducere">Reducere <span class="val-reducere"><%- prod.procent_reducere%></span>%</p>
+                            <p class="val-marimi" style="display:none;"> <%-prod.marimi%></p>
+                            <p class="val-copii" style="display:none"><%-prod.pt_copii%></p>
+                            <p class="val-luna" style="display:none"><%-prod.data_adaugare%></p>
+                            <p class="val-echipa" style="display:none"><%-prod.echipa%></p>
+                            <label class="selecteaza-cos">
+                                Selectează:<br/>
+                                <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
+                            </label>
                         </div>
-                        <p class="categorie">Categorie:<span class="val-categorie"><%- prod.categorie%></span></p>
-                        <figure>
-                            <a href="/produs/<%-prod.id %>" ><img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]" /></a>
-                        </figure>
-                        <label class="selecteaza-cos">
-                            Selectează:<br/>
-                            <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
-                        </label>
+                        <details class="info-prod">
+                            <summary> Specificatii</summary>
+                            <p class="echipa">Echipa: <span class="val-echipa"><%- prod.echipa%></span></p>
+                            <p class="descriere">Descriere: <span class="val-descriere"> <%-prod.descriere%></span> </p>
+                        </details>
+
                     </article>
                 <% }%>
             </div>

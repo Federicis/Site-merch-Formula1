@@ -1,0 +1,96 @@
+{
+  "cale_galerie": "resurse/imagini/galerie",
+  "imagini": [
+    {
+      "fisier": "alfaromeo.png",
+      "titlu": "Alfa Romeo",
+      "descriere": "Alfa Romeo F1 Team",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "alphatauri.png",
+      "titlu": "Alpha Tauri",
+      "descriere": "Alpha Tauri F1 Team",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "alpine.png",
+      "titlu": "Alpine",
+      "descriere": "Alpine F1 Team",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "astonmartin.png",
+      "titlu": "Aston Martin",
+      "descriere": "Aston Martin F1 Team",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "ferrari.png",
+      "titlu": "Scuderia Ferrari",
+      "descriere": "Ferrari F1 Team",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "haas.png",
+      "titlu": "Haas",
+      "descriere": "Haas F1 Team",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "mercedes.png",
+      "titlu": "Mercedes AMG Petronas",
+      "descriere": "Mercedes F1 Team",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "redbull.png",
+      "titlu":  "Red Bull",
+      "descriere": "Red Bull F1 Team",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "fast.png",
+      "titlu": "Fast",
+      "descriere": "VRUM",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "helmet.png",
+      "titlu": "Helmet",
+      "descriere": "Casca RB",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "merc.png",
+      "titlu": "Mecanici",
+      "descriere": "Mecanici Mercedes",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "planes.png",
+      "titlu": "Yas Marina Circuit",
+      "descriere": "Yas Marina Circuit",
+      "anotimp": "primavara",
+      "ccby": ""
+    },
+    {
+      "fisier": "ccby.jpg",
+      "titlu": "Formula 1, Singapore GrandPrix 2011",
+      "descriere": "Formula 1, Singapore GrandPrix 2011",
+      "anotimp": "primavara",
+      "ccby": "by Kroiz"
+    }
+  ]
+}

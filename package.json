@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
-
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,7 @@
   ],
   "author": "Alexandru Federicis",
   "license": "ISC",
-  "engines":{
+  "engines": {
     "node": "16.x"
   },
   "bugs": {
@@ -34,6 +33,8 @@
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "nodemon": "^2.0.15",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "sass": "^1.51.0",
+    "sharp": "^0.30.4"
   }
 }

@@ -6,7 +6,7 @@
         document.body.classList.remove("dark");
 </script>
 <header>
-    <h1 id="beginning"> <b>Merch Formula 1</b> </h1>
+    <h1 id="beginning"> <b><span style="color:black;">F</span>loor <span style="color:black";>1</span>t</b> </h1>
     <nav>
         <label id="hamburger" for="ch-menu">
             <img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu">
@@ -15,19 +15,26 @@
         <ul class="menu">
             <li><a href="/index"><span class="fa-solid fa-house-chimney"></span> <div id="home">Acasă</div> </a>
                 <ul class="submenu">
-                    <li><a href="/idex#welcome"> Bun venit! </a></li>
-                    <li><a href="/index#teams"> <b>Merch</b> echipe!</a></li>
-                    <li><a href="/index#drivers"> <b>Merch</b> șoferi! </a></li>
-                    <li><a href="/index#socialmedia"> Social media!</a></li>
-                    <li><a href="/index#contact">Contactează-ne!</a></li>
+                    <li><a href="/index#welcome"> Bun venit! </a></li>
+                    <li><a href="/index#teams"> <b>Merch</b> echipe</a></li>
+                    <li><a href="/index#drivers"> <b>Merch</b> șoferi </a></li>
+                    <li><a href="/index#socialmedia"> Social media</a></li>
+                    <li><a href="/index#contact">Contactează-ne</a></li>
                     <li><a href="/index#updates"><b>F1</b> UPDATES</a></li>
-                    <li><a href="/index#info">Informații!</a></li>
+                    <li><a href="/index#info">Informații</a></li>
                 </ul>
-            <li><a href="/account">Contul tău!</a></li>
-            <li><a href="/merch"><b>Merch</b>!</a></li>
-            <li><a href="/basket">Coșul tău!</a></li>
-            <li><a href="/check-out">Check-out!</a></li>
-            <li><a href="/despre"> Despre!</a></li>
+            <li><a href="/account">Contul tău</a></li>
+            <li><a href="/merch"><b>Merch</b>!</a>
+                <ul class="submenu">
+                    <li><a href="/merch">Toate </a></li>
+                    <% for(let categorie of locals.categorii){ %>
+                    <li><a href="/merch/categorii/<%-categorie.toLowerCase()%>"> <%-categorie%></a></li>
+                    <%}%>
+                </ul>
+            </li>
+            <li><a href="/basket">Coșul tău</a></li>
+            <li><a href="/check-out">Check-out</a></li>
+            <li><a href="/despre"> Despre</a></li>
         </ul>
     </nav>
 </header>

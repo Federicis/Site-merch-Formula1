@@ -10,41 +10,105 @@
 <body>
     <%-include("../fragments/header.ejs"); %>
 <main>
-
+    <div id="watermark"></div>
     <div id="container">
         <section id="welcome">
             <h2> Bine ai venit pe acest site!</h2>
-            <h3> Cumpărături plăcute!</h3>
+            <h3> Cumpărături plăcute!</h3> <i class="cos fa-solid fa-basket-shopping fa-bounce"></i>
             <p><button id="btn_tema">Schimba tema</button></p>
         </section>
+        <div id="galerie-statica" class="media">
 
-        <section id="tabel">
-            <table>
-                <thead>
-                <tr>
-                    <th colspan="4"> Următoarele 5 curse</th>
-                </tr>
-                <tr>
-                    <th> Nume </th>
-                    <th> Țară </th>
-                    <th> Dată </th>
-                    <th> Oră </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>11</td>
-                    <td>11</td>
-                    <td>11</td>
-                    <td></td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td colspan="4">Last updated on 3 Apr 2022</td>
-                </tr>
-                </tfoot>
-            </table>
+            <%
+            function getAnotimp() {
+                let curr_month = new Date().getMonth() + 1
+                return Math.floor(curr_month % 12 / 3)
+            }
+            v_anotimpuri=["iarna","primavara", "vara", "toamna"]
+            d=new Date()
+                    for (let imag of locals.imagini){
+            if (imag.anotimp && imag.anotimp.includes(v_anotimpuri[getAnotimp()])) {
+
+            %>
+                <figure id="grid-galerie">
+                    <picture>
+                        <source srcset="<%- imag.mic%>" media="(max-width:800px)" />
+                        <source srcset="<%- imag.mediu%>" media="(max-width:1200px)" />
+                        <img src="<%- imag.mare %>" alt="text alternativ" />
+                    </picture>
+                    <figcaption>
+                        <%- imag.descriere %>
+                        <%- imag.ccby%>
+                    </figcaption>
+                </figure>
+
+
+            <% }
+            } %>
+
+        </div>
+        <div id="container-video">
+            <div id="centrare-video">
+                <div id="clip-video">
+                    <div id="stil-video">
+                        <video width="320" height="240" playsinline controls preload="none" poster="resurse/imagini/poster.jpg">
+                            <source src="resurse/video/chicane.mp4" type="video/mp4">
+                            <source src="resurse/video/chicane.ogv" type="video/ogv">
+                            <track class="subs" default src="resurse/vtt/chicane.vtt" kind="subtitles" srclang="ro" label="romana">
+                            <track class="subs" src="resurse/vtt/chicane-en.vtt" kind="subtitles" srclang="en" label="engleza">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="tabel" style="caption-side: bottom; ">
+            <div id="tableOF">
+                <table>
+                    <thead>
+                    <tr>
+                        <th colspan="4"> Următoarele 5 curse</th>
+                    </tr>
+                    <tr>
+                        <th> Nume </th>
+                        <th> Țară </th>
+                        <th> Dată </th>
+                        <th> Oră </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr >
+                        <td>11</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td></td>
+                    </tr>
+                    <tr >
+                        <td>11</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td></td>
+                    </tr>
+                    <tr >
+                        <td>11</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td></td>
+                    </tr>
+                    <tr >
+                        <td>11</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4">Last updated on 3 Apr 2022</td>
+                    </tr>
+                    </tfoot>
+                    <caption style="color: #FF1801;">Pentru mai multe informații consultați site-ul oficial Formula 1.</caption>
+                </table>
+            </div>
         </section>
         <section id="calendar">
             <p>
@@ -104,7 +168,7 @@
         </section>
         <section id="teams">
             <h2><u><b>Merch</b> <b>echipe</b> <b><abbr title="Formula 1">F1</abbr></b>!</u></h2>
-            <figure>
+            <figure class="media">
                 <img id="ferrari-img" sizes="(min-width:1000px) 500px, (min-width:500px) 200px, (min-width:50px) 50px" src="resurse/ferrari50px.png"  srcset="resurse/ferrari400px.png 400w, resurse/ferrari200px.png 200w, resurse/ferrari50px.png 50w"  title="ferrari" alt="[Ferrari logo]"/>
                 <figcaption>Produse Ferrari
                     <br/><br/><br/>
@@ -133,11 +197,10 @@
             <h2>Noul sezon!</h2>
             <div id="updates-ifr">
                 <div id="updates-vids">
-                    <a href="https://www.youtube.com/embed/I--o8KEZhGQ" target="ifr">Prima zi de testing!</a>
-                    <br/>
-                    <a href="https://www.youtube.com/embed/75C_UHy097Y" target="ifr">A doua zi de testing!</a>
+                    <a href="https://www.youtube.com/embed/I--o8KEZhGQ" target="ifr">Prima zi!</a>
+                    <a href="https://www.youtube.com/embed/75C_UHy097Y" target="ifr">A doua zi!</a>
                 </div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/I--o8KEZhGQ" name="ifr" id="ifr"></iframe>
+                <iframe style= "border: 5px solid #FF1801"width="560" height="315" src="https://www.youtube.com/embed/I--o8KEZhGQ" name="ifr" id="ifr"></iframe>
             </div>
             <h2>Clasament!</h2>
             <p><a href="https://www.formula1.com/en/results.html/2021/drivers.html" target="_blank">Clasament șoferi!</a></p>
@@ -154,6 +217,7 @@
     </div>
 </main>
     <%-include("../fragments/footer.ejs"); %>
-<div id="myBtn"><a href="#beginning" >&#9650;</a></div>
+<div id="myBtn" class="tooltip"><a href="#beginning" >&#9650;</a>
+    <span class="tooltiptext">To the top</span></div>
 </body>
 </html>
