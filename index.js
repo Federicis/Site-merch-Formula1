@@ -49,7 +49,7 @@ client.query(`SELECT enum_range(NULL::categ_produse)`, function(err, rezQuery){
 app.set("view engine", "ejs");
 
 
-app.use("/resurse", express.static(__dirname + "/resurse"))
+app.use("/resurse", express.static("./resurse"))
 
 app.get('*', (req, res, next) =>{
     res.locals.categorii = categorii;
@@ -176,13 +176,13 @@ function creeazaImagini(){
 
         imag.mare=`${obImagini.cale_galerie}/${imag.fisier}`;
         if (!fs.existsSync(imag.mic))
-            sharp(__dirname+"/"+imag.mare).resize(dim_mic).toFile(__dirname+"/"+imag.mic);
+            sharp("./"+imag.mare).resize(dim_mic).toFile("./"+imag.mic);
 
 
         let dim_mediu=300;
         imag.mediu=`${obImagini.cale_galerie}/mediu/${nume_imag}-${dim_mediu}.png`
         if (!fs.existsSync(imag.mediu))
-            sharp(__dirname+"/"+imag.mare).resize(dim_mediu).toFile(__dirname+"/"+imag.mediu);
+            sharp("./"+imag.mare).resize(dim_mediu).toFile("./"+imag.mediu);
 
 
     }
@@ -193,7 +193,7 @@ creeazaImagini();
 
 
 function creeazaErori(){
-    var buf=fs.readFileSync(__dirname+"/Resurse/json/erori.json").toString("utf8");
+    var buf=fs.readFileSync("./Resurse/json/erori.json").toString("utf8");
     obErori=JSON.parse(buf);//global
 }
 creeazaErori();
