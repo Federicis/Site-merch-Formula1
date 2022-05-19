@@ -49,7 +49,7 @@ client.query(`SELECT enum_range(NULL::categ_produse)`, function(err, rezQuery){
 app.set("view engine", "ejs");
 
 
-app.use("/resurse", express.static("./resurse"))
+app.use("/Resurse", express.static("./Resurse"))
 
 app.get('*', (req, res, next) =>{
     res.locals.categorii = categorii;
