@@ -210,7 +210,7 @@ function randeazaEroare(res, identificator, titlu, text, imagine){
 }
 
 
-var s_port = process.env.PORT || 5000;
+var s_port = process.env.PORT || 8080;
 app.listen(s_port);
 // app.listen(8080);
 console.log("A pornit");
