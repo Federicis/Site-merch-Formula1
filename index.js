@@ -159,7 +159,7 @@ app.get("/*", function(req,res){
 })
 
 function creeazaImagini(){
-    var buf=fs.readFileSync(__dirname+"/resurse/json/galerie.json").toString("utf8");
+    var buf=fs.readFileSync(__dirname+"/Resurse/json/galerie.json").toString("utf8");
 
 
     obImagini=JSON.parse(buf);//global
