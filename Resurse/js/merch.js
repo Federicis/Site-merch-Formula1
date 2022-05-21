@@ -1,6 +1,7 @@
 window.onload=function(){
     // console.log(document.getElementById("sizes").options)
-
+    var articole= document.getElementsByClassName("produs");
+    var v_articole2=Array.from(articole);
      var preturi = document.getElementsByClassName("val-pret");
      var pretMin = 100000;
      var pretMax = -1;
@@ -86,10 +87,33 @@ window.onload=function(){
              }
          }
      }
+    function sorteaza(semn){
+        var articole= document.getElementsByClassName("produs");
+        var v_articole=Array.from(articole);
+        v_articole.sort(function(a,b){
+            var pret_a= parseFloat(a.getElementsByClassName("val-pret")[0].innerHTML);
+            var pret_b= parseFloat(b.getElementsByClassName("val-pret")[0].innerHTML);
+            if(pret_a!=pret_b)
+                return semn*(pret_a - pret_b);
+            else{
+
+                var marimi_a= a.getElementsByClassName("val-marimi")[0].innerHTML.trim().split(',').length;
+                var marimi_b= b.getElementsByClassName("val-marimi")[0].innerHTML.trim().split(',').length;
+                return semn*(marimi_a - marimi_b);
+            }
+
+        });
+
+        for(let art of v_articole){
+            art.parentElement.appendChild(art);
+        }
+    }
+
     document.getElementById("sortCrescPret").onclick = function() {
+         sorteaza(1)
     }
     document.getElementById("sortDescrescPret").onclick = function() {
-
+        sorteaza(-1)
     }
      let alt = 0;
     window.addEventListener("keydown", function (event) {
@@ -154,6 +178,9 @@ window.onload=function(){
          document.getElementById("inp-size").value = "";
          document.getElementById("inp-kids").checked = false;
          document.getElementsByName("gr_rad")[document.getElementsByName("gr_rad").length - 1].checked = true;
+         for(let art of v_articole2){
+             art.parentElement.appendChild(art);
+         }
          for(let luna of document.getElementById("inp-luna").options)
          {
              if(luna.value == "toate"){
@@ -164,6 +191,7 @@ window.onload=function(){
                  luna.selected = false;
              }
          }
+
          for(let art of articole){
              art.style.display= "grid";
          }
