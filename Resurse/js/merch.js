@@ -1,4 +1,5 @@
 window.onload=function(){
+    console.log(window.location.hostname)
     // console.log(document.getElementById("sizes").options)
     var articole= document.getElementsByClassName("produs");
     var v_articole2=Array.from(articole);

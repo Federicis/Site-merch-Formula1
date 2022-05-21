@@ -271,3 +271,13 @@ th, td{
     font-family: 'Tangerine', serif;
     font-size: 48px;
 }
+
+#btn_tema{
+    background: transparent;
+    border: none;
+    font-size: 30px;
+}
+body.darkstyle{
+    background: red;
+    content:"<i class=\"fa-solid fa-moon\" style='color: white;'></i>";
+}
