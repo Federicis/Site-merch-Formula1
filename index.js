@@ -7,7 +7,20 @@ const sass=require("sass");
 // const formidable= require('formidable');
 app= express();
 
-client= new Client({user:"Alex", password: "2002", database:"dbproiect_web", host:"localhost", port:"5432"})
+// client= new Client({user:"Alex", password: "2002", database:"dbproiect_web", host:"localhost", port:5432})
+let client
+if (process.env.DATABASE_URL) {
+    client = new Client({
+        connectionString: process.env.DATABASE_URL,
+        ssl: {
+            rejectUnauthorized: false
+        }
+    })
+} else {
+    client = new Client({user: "Alex", password: "2002", database: "dbproiect_web", host: "localhost", port: 5432})
+}
+
+
 client.connect()
 
 var categorii = [], theoptiuni = [], luni = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noimebrie", "decembrie"], echipe =[], produse = [];
@@ -49,7 +62,7 @@ client.query(`SELECT enum_range(NULL::categ_produse)`, function(err, rezQuery){
 app.set("view engine", "ejs");
 
 
-app.use("/resurse", express.static("./resurse"))
+app.use("/Resurse", express.static("./Resurse"))
 
 app.get('*', (req, res, next) =>{
     res.locals.categorii = categorii;
