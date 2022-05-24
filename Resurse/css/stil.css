@@ -135,6 +135,7 @@ body{
     --button-width: 50px;
     --display-mode:grid;
     --border-color:#FF1801;
+    --initialscolor: black;
     background-color:var(--bgcolor);
     color:var(--textcolor);
     margin-left:20px;
@@ -157,6 +158,7 @@ body.dark{
     --button-width: 50px;
     --display-mode:grid;
     --border-color:#FF1801;
+    --initialscolor: white;
     background-color:var(--bgcolor);
     color:var(--textcolor);
     margin-left:20px;
@@ -277,7 +279,7 @@ th, td{
     border: none;
     font-size: 30px;
 }
-body.darkstyle{
-    background: red;
-    content:"<i class=\"fa-solid fa-moon\" style='color: white;'></i>";
+
+.initials{
+    color: var(--initialscolor);
 }

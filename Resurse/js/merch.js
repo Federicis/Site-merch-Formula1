@@ -1,6 +1,7 @@
 window.onload=function(){
     console.log(window.location.hostname)
     // console.log(document.getElementById("sizes").options)
+
     var articole= document.getElementsByClassName("produs");
     var v_articole2=Array.from(articole);
      var preturi = document.getElementsByClassName("val-pret");
@@ -24,6 +25,9 @@ window.onload=function(){
     var valSize = "";
      document.getElementById("inp-size").onchange = function(){
         valSize = this.value;
+     }
+     document.getElementsByClassName("accordion-button")[0].onclick = function(){
+         console.log(document.getElementsByClassName("accordion-button")[0])
      }
      document.getElementById("filtrare").onclick = function(){
          var valNume= document.getElementById("inp-nume").value.toLowerCase();
